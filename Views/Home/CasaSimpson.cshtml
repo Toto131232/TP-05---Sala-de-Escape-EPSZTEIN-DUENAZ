@@ -1,0 +1,97 @@
+@{
+    ViewData["Title"] = "Atrapa Rosquillas";
+}
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #fdd835;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+    }
+
+    #puntaje {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.5em;
+        background: white;
+        padding: 10px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .rosquilla {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        cursor: pointer;
+        animation: caer 4s linear infinite;
+    }
+
+   
+
+    #mensaje {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        color: green;
+        display: none;
+    }
+</style>
+
+<div id="puntaje">Puntaje: 0</div>
+<div id="mensaje">¡Ganaste!</div>
+
+<script>
+    const puntajeDisplay = document.getElementById("puntaje");
+    const mensaje = document.getElementById("mensaje");
+
+    let puntaje = 0;
+
+    function crearRosquilla() {
+        const rosquilla = document.createElement("div");
+        rosquilla.classList.add("rosquilla");
+
+        const tipo = Math.random() < 0.75 ? "buena" : "mala";
+        if (tipo === "buena") {
+            rosquilla.style.backgroundImage = "url('/img/rosquilla-rosa.png')";
+        } else {
+            rosquilla.style.backgroundImage = "url('/img/rosquilla-negra.png')";
+        }
+
+        rosquilla.style.left = Math.floor(Math.random() * 90) + "vw";
+        rosquilla.style.animationDuration = (Math.random() * 2 + 3) + "s";
+
+        rosquilla.addEventListener("click", () => {
+            if (tipo === "buena") {
+                puntaje++;
+                if (puntaje === 10) {
+                    mensaje.style.display = "block";
+                    setTimeout(() => {
+                        window.location.href = "/";
+                    }, 2000);
+                }
+            } else {
+                puntaje = 0;
+            }
+            puntajeDisplay.innerText = "Puntaje: " + puntaje;
+            rosquilla.remove();
+        });
+
+        document.body.appendChild(rosquilla);
+
+        setTimeout(() => {
+            if (document.body.contains(rosquilla)) {
+                rosquilla.remove();
+            }
+        }, 5000);
+    }
+
+    setInterval(crearRosquilla, 800);
+</script>

@@ -19,7 +19,7 @@
         top: 0; left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.4); /* oscurece el fondo */
+        background-color: rgba(0, 0, 0, 0.4);
         z-index: 0;
     }
 
@@ -47,17 +47,6 @@
         margin-bottom: 25px;
     }
 
-    ul.lugares {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 30px;
-    }
-
-    ul.lugares li {
-        margin: 10px 0;
-        font-size: 1.1em;
-    }
-
     .btn-start {
         background-color: #ff5722;
         color: white;
@@ -83,6 +72,35 @@
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
+
+    .botones-salas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .boton-sala {
+        padding: 12px 24px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 10px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s;
+        min-width: 120px;
+    }
+
+    .boton-sala:disabled {
+        background-color: #aaa;
+        cursor: not-allowed;
+    }
+
+    .boton-sala:hover:not(:disabled) {
+        transform: scale(1.05);
+    }
 </style>
 
 <div class="overlay"></div>
@@ -91,25 +109,53 @@
     <h1>Escape Room Springfield</h1>
 
     <p class="intro">
-        Springfield está en peligro. Solo vos podés recorrer sus lugares más icónicos, resolver los acertijos y evitar un desastre nuclear… ¡antes de que Skinner te atrape!
+        
     </p>
-
-    <ul class="lugares">
-        <li>🏠 Casa de los Simpson</li>
-        <li>🏪 Kwik-E-Mart</li>
-        <li>⚛ Planta Nuclear</li>
-        <li>🍺 Taberna de Moe</li>
-        <li>🏫 Escuela de Springfield</li>
-        <li>⛪ Iglesia del Reverendo</li>
-        <li>🍔 Krusty Burger</li>
-    </ul>
 
     <form asp-controller="Game" asp-action="Start">
         <button class="btn-start">Comenzar Aventura</button>
     </form>
 
-    <!-- Imagen inferior -->
     <div class="imagen-inferior">
-        <img src="img/mapa.png" alt="">
+        <img src="img/mapa.png" alt="Mapa Springfield">
+    </div>
+
+    <!-- Botones para las salas -->
+    <div class="botones-salas">
+        <button class="boton-sala" id="btnSala1" onclick="irASala(1)">Ir a Sala 1</button>
+        <button class="boton-sala" id="btnSala2" onclick="irASala(2)" disabled>Ir a Sala 2</button>
+        <button class="boton-sala" id="btnSala3" onclick="irASala(3)" disabled>Ir a Sala 3</button>
+        <button class="boton-sala" id="btnSala4" onclick="irASala(4)" disabled>Ir a Sala 4</button>
+        <button class="boton-sala" id="btnSala5" onclick="irASala(5)" disabled>Ir a Sala 5</button>
+        <button class="boton-sala" id="btnSala6" onclick="irASala(6)" disabled>Ir a Sala 6</button>
+        <button class="boton-sala" id="btnSala7" onclick="irASala(7)" disabled>Ir a Sala 7</button>
     </div>
 </div>
+
+<script>
+    let progreso = 1;
+
+    function irASala(numero) {
+        if (numero === progreso) {
+            // Simula avanzar a la sala
+            window.location.href = `/Game/Sala${numero}`;
+            progreso++;
+            actualizarBotones();
+        } else {
+            alert("Tenés que completar la sala anterior primero.");
+        }
+    }
+
+    function actualizarBotones() {
+        for (let i = 1; i <= 7; i++) {
+            const boton = document.getElementById(`btnSala${i}`);
+            if (i === progreso) {
+                boton.disabled = false;
+            } else {
+                boton.disabled = true;
+            }
+        }
+    }
+
+    actualizarBotones();
+</script>
