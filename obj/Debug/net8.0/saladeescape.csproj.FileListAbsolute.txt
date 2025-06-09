@@ -27,3 +27,32 @@ Z:\PROG\saladeescape\obj\Debug\net8.0\saladeescape.pdb
 Z:\PROG\saladeescape\obj\Debug\net8.0\saladeescape.genruntimeconfig.cache
 Z:\PROG\saladeescape\obj\Debug\net8.0\ref\saladeescape.dll
 Z:\PROG\saladeescape\obj\Debug\net8.0\saladeescape.sourcelink.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\appsettings.Development.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\appsettings.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.staticwebassets.runtime.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.exe
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.deps.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.runtimeconfig.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.dll
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.pdb
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.GeneratedMSBuildEditorConfig.editorconfig
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.AssemblyInfoInputs.cache
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.AssemblyInfo.cs
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.csproj.CoreCompileInputs.cache
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.MvcApplicationPartsAssemblyInfo.cache
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.RazorAssemblyInfo.cache
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.RazorAssemblyInfo.cs
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.sourcelink.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets.build.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets.development.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.saladeescape.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.build.saladeescape.props
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.saladeescape.props
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.saladeescape.props
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\scopedcss\bundle\saladeescape.styles.css
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.dll
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\refint\saladeescape.dll
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.pdb
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.genruntimeconfig.cache
+D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\ref\saladeescape.dll

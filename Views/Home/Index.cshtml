@@ -61,6 +61,7 @@
     .btn-start:hover {
         background-color: #e64a19;
         transform: scale(1.05);
+        
     }
 
     .imagen-inferior {
@@ -72,35 +73,55 @@
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
+    .botonera {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+}
 
-    .botones-salas {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 30px;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #007BFF;
+}
+
+button:hover:enabled {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+.seccion {
+      margin: 20px auto;
+      background-color: #007BFF;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
     }
 
-    .boton-sala {
-        padding: 12px 24px;
-        font-size: 1.1em;
-        border: none;
-        border-radius: 10px;
-        background-color: #4CAF50;
-        color: white;
-        cursor: pointer;
-        transition: transform 0.2s;
-        min-width: 120px;
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 80%;
+    }
+    p
+    {
+        color:white
     }
 
-    .boton-sala:disabled {
-        background-color: #aaa;
-        cursor: not-allowed;
-    }
-
-    .boton-sala:hover:not(:disabled) {
-        transform: scale(1.05);
-    }
 </style>
 
 <div class="overlay"></div>
@@ -120,42 +141,78 @@
         <img src="img/mapa.png" alt="Mapa Springfield">
     </div>
 
-    <!-- Botones para las salas -->
-    <div class="botones-salas">
-        <button class="boton-sala" id="btnSala1" onclick="irASala(1)">Ir a Sala 1</button>
-        <button class="boton-sala" id="btnSala2" onclick="irASala(2)" disabled>Ir a Sala 2</button>
-        <button class="boton-sala" id="btnSala3" onclick="irASala(3)" disabled>Ir a Sala 3</button>
-        <button class="boton-sala" id="btnSala4" onclick="irASala(4)" disabled>Ir a Sala 4</button>
-        <button class="boton-sala" id="btnSala5" onclick="irASala(5)" disabled>Ir a Sala 5</button>
-        <button class="boton-sala" id="btnSala6" onclick="irASala(6)" disabled>Ir a Sala 6</button>
-        <button class="boton-sala" id="btnSala7" onclick="irASala(7)" disabled>Ir a Sala 7</button>
+  <div class="seccion">
+    <p>Casa Simpsons</p>
+    <a href="/Home/CasaSimpson" target="_blank">
+      <button>Entrar a Sala 1</button>
+    </a>
+  </div>
+
+  <!-- Sala 2 a 6: con clave -->
+  <div class="seccion">
+    <p>Clave para Sala 2:</p>
+    <div id="entrada2">
+      <input type="text" oninput="verificarClave(this, 'boton2', 'clave2', 'entrada2')" placeholder="Escribe la clave">
     </div>
-</div>
+    <a href="/Home/PlantaNuclear" target="_blank">
+      <button id="boton2" disabled>Entrar a Sala 2</button>
+    </a>
+  </div>
 
-<script>
-    let progreso = 1;
+  <div class="seccion">
+    <p>Clave para Sala 3:</p>
+    <div id="entrada3">
+      <input type="text" oninput="verificarClave(this, 'boton3', 'clave3', 'entrada3')" placeholder="Escribe la clave">
+    </div>
+    <a href="/Home/KwikEMart" target="_blank">
+      <button id="boton3" disabled>Entrar a Sala 3</button>
+    </a>
+  </div>
 
-    function irASala(numero) {
-        if (numero === progreso) {
-            // Simula avanzar a la sala
-            window.location.href = `/Game/Sala${numero}`;
-            progreso++;
-            actualizarBotones();
-        } else {
-            alert("Tenés que completar la sala anterior primero.");
-        }
+  <div class="seccion">
+    <p>Clave para Sala 4:</p>
+    <div id="entrada4">
+      <input type="text" oninput="verificarClave(this, 'boton4', 'clave4', 'entrada4')" placeholder="Escribe la clave">
+    </div>
+    <a href="/Home/krusty" target="_blank">
+      <button id="boton4" disabled>Entrar a Sala 4</button>
+    </a>
+  </div>
+
+  <div class="seccion">
+    <p>Clave para Sala 5:</p>
+    <div id="entrada5">
+      <input type="text" oninput="verificarClave(this, 'boton5', 'clave5', 'entrada5')" placeholder="Escribe la clave">
+    </div>
+    <a href="https://www.ejemplo5.com" target="_blank">
+      <button id="boton5" disabled>Entrar a Sala 5</button>
+    </a>
+  </div>
+
+  <div class="seccion">
+    <p>Clave para Sala 6:</p>
+    <div id="entrada6">
+      <input type="text" oninput="verificarClave(this, 'boton6', 'clave6', 'entrada6')" placeholder="Escribe la clave">
+    </div>
+    <a href="https://www.ejemplo6.com" target="_blank">
+      <button id="boton6" disabled>Entrar a Sala 6</button>
+    </a>
+  </div>
+
+  <script>
+    const claves = {
+      clave2: "mundo",
+      clave3: "simpsons",
+      clave4: "donut",
+      clave5: "springfield",
+      clave6: "bart"
+    };
+
+    function verificarClave(inputElem, botonId, claveNombre, contenedorId) {
+      const valor = inputElem.value.trim().toLowerCase();
+      if (valor === claves[claveNombre]) {
+        document.getElementById(botonId).disabled = false;
+        document.getElementById(contenedorId).innerHTML = "<p style='color:green;'>✔ Clave correcta</p>";
+      }
     }
-
-    function actualizarBotones() {
-        for (let i = 1; i <= 7; i++) {
-            const boton = document.getElementById(`btnSala${i}`);
-            if (i === progreso) {
-                boton.disabled = false;
-            } else {
-                boton.disabled = true;
-            }
-        }
-    }
-
-    actualizarBotones();
-</script>
+  </script>

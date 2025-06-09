@@ -1,97 +1,153 @@
 @{
-    ViewData["Title"] = "Atrapa Rosquillas";
+    ViewData["Title"] = "Juego de Rosquillas";
 }
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background: #fdd835;
-        font-family: 'Arial', sans-serif;
-        text-align: center;
-    }
-
-    #puntaje {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 1.5em;
-        background: white;
-        padding: 10px 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .rosquilla {
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        background-size: cover;
-        cursor: pointer;
-        animation: caer 4s linear infinite;
-    }
-
-   
-
-    #mensaje {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 3em;
-        color: green;
-        display: none;
-    }
-</style>
-
-<div id="puntaje">Puntaje: 0</div>
-<div id="mensaje">¡Ganaste!</div>
-
-<script>
-    const puntajeDisplay = document.getElementById("puntaje");
-    const mensaje = document.getElementById("mensaje");
-
-    let puntaje = 0;
-
-    function crearRosquilla() {
-        const rosquilla = document.createElement("div");
-        rosquilla.classList.add("rosquilla");
-
-        const tipo = Math.random() < 0.75 ? "buena" : "mala";
-        if (tipo === "buena") {
-            rosquilla.style.backgroundImage = "url('/img/rosquilla-rosa.png')";
-        } else {
-            rosquilla.style.backgroundImage = "url('/img/rosquilla-negra.png')";
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url('/img/CasaSimpson.webp') no-repeat center center fixed;
+            background-size: cover;
         }
 
-        rosquilla.style.left = Math.floor(Math.random() * 90) + "vw";
-        rosquilla.style.animationDuration = (Math.random() * 2 + 3) + "s";
+        #pantallaInicio {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
 
-        rosquilla.addEventListener("click", () => {
-            if (tipo === "buena") {
-                puntaje++;
-                if (puntaje === 10) {
-                    mensaje.style.display = "block";
-                    setTimeout(() => {
-                        window.location.href = "/";
-                    }, 2000);
-                }
-            } else {
-                puntaje = 0;
-            }
-            puntajeDisplay.innerText = "Puntaje: " + puntaje;
-            rosquilla.remove();
-        });
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 20px;
+            background-color: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-        document.body.appendChild(rosquilla);
+        .rosquilla {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
-        setTimeout(() => {
-            if (document.body.contains(rosquilla)) {
-                rosquilla.remove();
-            }
-        }, 5000);
+<div id="pantallaInicio">
+    <h1>Bienvenido al juego de rosquillas 🍩</h1>
+    <p>Hacé clic en las rosquillas antes de que lleguen al suelo para ganar puntos.</p>
+    <p>Si una rosquilla cae al piso, perdés 3 segundos. Tenés 10 minutos para juntar 50 puntos.</p>
+    <button onclick="empezarJuego()">Empezar juego</button>
+</div>
+
+<div id="info">
+    Tiempo restante: <span id="cronometro">10:00</span> | Puntos: <span id="puntos">0</span>
+</div>
+
+<script>
+    let tiempoRestante = 600; // 10 minutos
+    let puntos = 0;
+    let intervaloCrono;
+    let intervaloRosquillas;
+
+    function empezarJuego() {
+        document.getElementById('pantallaInicio').style.display = 'none';
+        iniciarCronometro();
+        intervaloRosquillas = setInterval(crearRosquilla, 600);
     }
 
-    setInterval(crearRosquilla, 800);
+    function iniciarCronometro() {
+        intervaloCrono = setInterval(() => {
+            if (tiempoRestante > 0) {
+                tiempoRestante--;
+                actualizarCronometro();
+            } else {
+                finalizarJuego(false); // perdió
+            }
+        }, 1000);
+    }
+
+    function actualizarCronometro() {
+        let min = Math.floor(tiempoRestante / 60);
+        let seg = tiempoRestante % 60;
+        document.getElementById("cronometro").textContent = `${min.toString().padStart(2, '0')}:${seg.toString().padStart(2, '0')}`;
+    }
+
+    function sumarPuntos(cantidad) {
+        puntos += cantidad;
+        document.getElementById("puntos").textContent = puntos;
+
+        if (puntos >= 50) {
+            finalizarJuego(true); // ganó
+        }
+    }
+
+    function restarSegundos(cantidad) {
+        tiempoRestante -= cantidad;
+        if (tiempoRestante < 0) tiempoRestante = 0;
+        actualizarCronometro();
+        if (tiempoRestante === 0) {
+            finalizarJuego(false);
+        }
+    }
+
+    function finalizarJuego(gano) {
+        clearInterval(intervaloCrono);
+        clearInterval(intervaloRosquillas);
+        if (gano) {
+            window.location.href = "/ganaste.html";
+        } else {
+            window.location.href = "/perdiste.html";
+        }
+    }
+
+    function crearRosquilla() {
+        const rosquilla = document.createElement('img');
+        rosquilla.src = '/img/Dona.png';
+        rosquilla.className = 'rosquilla';
+        rosquilla.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+        rosquilla.style.top = '-60px';
+        document.body.appendChild(rosquilla);
+
+        let posY = -60;
+        const velocidad = 2 + Math.random() * 3;
+
+        const caer = setInterval(() => {
+            posY += velocidad;
+            rosquilla.style.top = posY + 'px';
+
+            if (posY > window.innerHeight) {
+                rosquilla.remove();
+                clearInterval(caer);
+                restarSegundos(3);
+            }
+        }, 16);
+
+        rosquilla.onclick = () => {
+            rosquilla.remove();
+            clearInterval(caer);
+            sumarPuntos(1);
+        };
+    }
 </script>
+
+</body>
+</html>

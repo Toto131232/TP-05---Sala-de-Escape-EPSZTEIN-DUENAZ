@@ -1,0 +1,53 @@
+@model saladeescape.Models.Patron
+@{
+    ViewData["Title"] = "Planta Nuclear - Simón";
+    var iluminado = ViewBag.BotonIluminado as int?;
+}
+
+<h2>Juego de Simón - Planta Nuclear</h2>
+
+@if (!Model.Secuencia.Any())
+{
+    <form method="post" asp-action="Iniciar">
+        <button type="submit">Iniciar Juego</button>
+    </form>
+}
+else if (!Model.MostrandoPatron)
+{
+    <div class="grid">
+        @for (int i = 0; i < 9; i++)
+        {
+            <form method="post" asp-action="InputUsuario" style="display:inline;">
+                <input type="hidden" name="botonId" value="@i" />
+                <button class="grid-button" type="submit" style="background-color:@(iluminado == i ? "#ff0" : "#ccc")">@i</button>
+            </form>
+        }
+    </div>
+}
+else
+{
+    <p>Mostrando patrón...</p>
+    <div class="grid">
+        @for (int i = 0; i < 9; i++)
+        {
+            <button disabled class="grid-button" style="background-color:@(iluminado == i ? "#ff0" : "#eee")">@i</button>
+        }
+    </div>
+}
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 10px;
+        margin-top: 20px;
+    }
+
+    .grid-button {
+        width: 100px;
+        height: 100px;
+        font-size: 24px;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+</style>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Disparale a los Simpson</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 70px;
+        }
+
+        #puntaje-cajita {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ffcc00;
+            color: #222;
+            font-weight: bold;
+            font-size: 1.5em;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+            user-select: none;
+        }
+
+        #juego {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: 30px auto;
+            background-image: url("/img/krustybg.png"); /* 👉 FONDO DEL MAPA */
+            background-size: cover;
+            background-position: center;
+            border: 4px solid yellow;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .personaje {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            cursor: crosshair;
+            transition: transform 0.1s;
+        }
+
+        .personaje:hover {
+            transform: scale(1.1);
+        }
+
+        #mensaje-final {
+            font-size: 2em;
+            color: lightgreen;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="puntaje-cajita">Puntos: 0</div>
+
+<h1>🎯 ¡Disparale a los personajes de Los Simpson!</h1>
+
+<div id="juego"></div>
+<div id="mensaje-final"></div>
+
+<script>
+    const juego = document.getElementById("juego");
+    const puntajeCajita = document.getElementById("puntaje-cajita");
+    const mensajeFinal = document.getElementById("mensaje-final");
+
+    let puntos = 0;
+    let juegoActivo = true;
+
+    const imagenes = [
+        "/img/homer.png",
+        "/img/bart.png",
+        "/img/duff.png",
+        "/img/homer2.png",
+        "/img/nelson.png"
+    ];
+
+    function actualizarPuntos(valor) {
+        puntos += valor;
+        puntajeCajita.innerText = `Puntos: ${puntos}`;
+        if (puntos < 0) {
+            puntajeCajita.style.color = "red";
+        } else {
+            puntajeCajita.style.color = "#222";
+        }
+
+        if (puntos >= 75 && juegoActivo) {
+            juegoActivo = false;
+            mensajeFinal.innerText = "🎉 ¡Ganaste el juego!";
+            clearInterval(aparicionInterval);
+        }
+    }
+
+    function moverPersonaje(personaje) {
+        const velocidad = 4 + Math.random() * 4;
+        let dx = (Math.random() < 0.5 ? -1 : 1) * velocidad;
+        let dy = (Math.random() < 0.5 ? -1 : 1) * velocidad;
+
+        const mover = setInterval(() => {
+            const x = personaje.offsetLeft + dx;
+            const y = personaje.offsetTop + dy;
+
+            if (x <= 0 || x >= juego.clientWidth - 80) dx = -dx;
+            if (y <= 0 || y >= juego.clientHeight - 80) dy = -dy;
+
+            personaje.style.left = `${personaje.offsetLeft + dx}px`;
+            personaje.style.top = `${personaje.offsetTop + dy}px`;
+        }, 50);
+        return mover;
+    }
+
+    function aparecerPersonaje() {
+        if (!juegoActivo) return;
+
+        const personaje = document.createElement("img");
+        personaje.src = imagenes[Math.floor(Math.random() * imagenes.length)];
+        personaje.classList.add("personaje");
+
+        const maxX = juego.clientWidth - 80;
+        const maxY = juego.clientHeight - 80;
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        personaje.style.left = `${x}px`;
+        personaje.style.top = `${y}px`;
+
+        let fueClickeado = false;
+        const movimiento = moverPersonaje(personaje);
+
+        personaje.addEventListener("click", () => {
+            if (!fueClickeado) {
+                fueClickeado = true;
+                actualizarPuntos(10);
+                clearInterval(movimiento);
+                personaje.remove();
+            }
+        });
+
+        juego.appendChild(personaje);
+
+        // ⏱️ Desaparece a los 5 segundos si no fue clickeado
+        setTimeout(() => {
+            if (!fueClickeado && juego.contains(personaje)) {
+                actualizarPuntos(-5);
+                clearInterval(movimiento);
+                personaje.remove();
+            }
+        }, 5000);
+    }
+
+    const aparicionInterval = setInterval(() => {
+        for (let i = 0; i < 2; i++) {
+            aparecerPersonaje();
+        }
+    }, 800);
+</script>
+
+</body>
+</html>

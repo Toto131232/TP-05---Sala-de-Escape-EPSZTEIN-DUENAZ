@@ -1,0 +1,169 @@
+@{
+    ViewData["Title"] = "Kwik-E-Mart";
+    var random = new Random();
+    var tiempo = random.Next(10, 31); // 10 a 30 segundos
+    var objetivo = random.Next(20, 41); // 10 a 20 clics
+}
+
+<style>
+    .kwik-container {
+        text-align: center;
+        margin-top: 60px;
+        position: relative;
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    .contador {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    .btn-clic, .btn-reset {
+        font-size: 1.5em;
+        padding: 15px 30px;
+        margin: 10px;
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .btn-clic {
+        position: absolute;
+    }
+
+    .btn-reset {
+        background-color: #9c27b0;
+    }
+
+    .btn-clic:hover, .btn-reset:hover {
+        transform: scale(1.05);
+    }
+
+    .resultado {
+        margin-top: 30px;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+</style>
+
+<div class="kwik-container">
+    <h1>🛒 Kwik-E-Mart - Carrera de cajas</h1>
+
+    <p>Tenés <strong id="tiempoTotal">@tiempo</strong> segundos para hacer exactamente <strong id="objetivoClicks">@objetivo</strong> clics.</p>
+
+    <div class="contador">
+        ⏱ Tiempo restante: <span id="tiempoRestante">@tiempo</span>s
+    </div>
+
+    <div class="contador">
+        🖱️ Clics: <span id="clicks">0</span>
+    </div>
+
+    <button class="btn-clic" id="botonClick" disabled>¡Click!</button>
+    <button class="btn-reset" id="botonReset" disabled>Resetear clics</button>
+
+    <div class="resultado" id="resultado"></div>
+</div>
+
+<script>
+    let tiempo = @tiempo;
+    let objetivo = @objetivo;
+    let clicks = 0;
+    let tiempoRestante = tiempo;
+    let juegoActivo = false;
+    let esperarVerificacion = false;
+    let timerInterval;
+    let movimientoInterval;
+
+    const tiempoSpan = document.getElementById("tiempoRestante");
+    const clicksSpan = document.getElementById("clicks");
+    const botonClick = document.getElementById("botonClick");
+    const botonReset = document.getElementById("botonReset");
+    const resultado = document.getElementById("resultado");
+
+    function moverBoton() {
+        const contenedor = document.querySelector(".kwik-container");
+        const maxX = contenedor.clientWidth - botonClick.offsetWidth;
+        const maxY = contenedor.clientHeight - botonClick.offsetHeight;
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        botonClick.style.left = `${x}px`;
+        botonClick.style.top = `${y}px`;
+    }
+
+    setTimeout(() => {
+        juegoActivo = true;
+        botonClick.disabled = false;
+        botonReset.disabled = false;
+
+        movimientoInterval = setInterval(moverBoton, 1000);
+        moverBoton(); 
+
+        timerInterval = setInterval(() => {
+            tiempoRestante--;
+            tiempoSpan.innerText = tiempoRestante;
+            if (tiempoRestante <= 0 && !esperarVerificacion) {
+                finJuego(false);
+            }
+        }, 1000);
+    }, 2000);
+
+    botonClick.addEventListener("click", () => {
+        if (!juegoActivo || esperarVerificacion) return;
+
+        clicks++;
+        clicksSpan.innerText = clicks;
+
+        if (clicks > objetivo) {
+            finJuego(false);
+        }
+
+        if (clicks === objetivo) {
+            esperarVerificacion = true;
+            botonClick.disabled = true;
+            botonReset.disabled = true;
+            resultado.innerText = "¡Esperando 3 segundos para confirmar!";
+            setTimeout(() => {
+                if (tiempoRestante > 0) {
+                    finJuego(true);
+                } else {
+                    finJuego(false);
+                }
+            }, 3000);
+        }
+    });
+
+    botonReset.addEventListener("click", () => {
+        if (!juegoActivo || esperarVerificacion) return;
+        clicks = 0;
+        clicksSpan.innerText = clicks;
+    });
+
+    function finJuego(ganaste) {
+        clearInterval(timerInterval);
+        clearInterval(movimientoInterval);
+        juegoActivo = false;
+        botonClick.disabled = true;
+        botonReset.disabled = true;
+
+        if (ganaste) {
+            resultado.innerHTML = "✅ ¡Ganaste!";
+            fetch("/Game/CompletarSala", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "nombre=KwikEMart"
+            }).then(() => {
+                setTimeout(() => window.location.href = "/Game/Inicio", 2000);
+            });
+        } else {
+            resultado.innerHTML = "❌ Perdiste. Intentá de nuevo.";
+            setTimeout(() => window.location.reload(), 3000);
+        }
+    }
+</script>

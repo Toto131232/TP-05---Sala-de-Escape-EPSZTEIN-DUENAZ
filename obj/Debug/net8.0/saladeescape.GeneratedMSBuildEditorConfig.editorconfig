@@ -9,39 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = saladeescape
 build_property.RootNamespace = saladeescape
-build_property.ProjectDir = Z:\PROG\saladeescape\
+build_property.ProjectDir = D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = Z:\PROG\saladeescape
+build_property.MSBuildProjectDirectory = D:\Toto Usuario\Escritorio\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ
 build_property._RazorSourceGeneratorDebug = 
 
-[Z:/PROG/saladeescape/Views/Home/CasaSimpson.cshtml]
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/CasaSimpson.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXNhU2ltcHNvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/PROG/saladeescape/Views/Home/Index.cshtml]
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/PROG/saladeescape/Views/Home/VideoDeEntrada.cshtml]
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/krusty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxrcnVzdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/KwikEMart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLd2lrRU1hcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/PlantaNuclear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGFudGFOdWNsZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/VideoDeEntrada.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWRlb0RlRW50cmFkYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/PROG/saladeescape/Views/Shared/_Layout.cshtml]
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/PROG/saladeescape/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/PROG/saladeescape/Views/_ViewImports.cshtml]
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Z:/PROG/saladeescape/Views/_ViewStart.cshtml]
+[D:/Toto Usuario/Escritorio/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
