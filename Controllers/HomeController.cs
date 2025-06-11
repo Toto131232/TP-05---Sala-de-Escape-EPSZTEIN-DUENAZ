@@ -76,5 +76,10 @@ public class HomeController : Controller
         {
             return View("krusty");
         }
+        public IActionResult City()
+    {
+        return View("city");
+    }
 }
+
 

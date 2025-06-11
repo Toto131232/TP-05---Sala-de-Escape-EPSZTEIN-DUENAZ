@@ -2,21 +2,17 @@
     ViewData["Title"] = "Kwik-E-Mart";
     var random = new Random();
     var tiempo = random.Next(10, 31); // 10 a 30 segundos
-    var objetivo = random.Next(20, 41); // 10 a 20 clics
+    var objetivo = random.Next(20, 41); // 20 a 40 clics
 }
 
 <style>
-    .kwik-container {
-        text-align: center;
-        margin-top: 60px;
-        position: relative;
-        height: 80vh;
-        overflow: hidden;
-    }
+   
 
     .contador {
         font-size: 2em;
         margin: 20px 0;
+        color: white;
+        text-shadow: 1px 1px 3px black;
     }
 
     .btn-clic, .btn-reset {
@@ -47,13 +43,15 @@
         margin-top: 30px;
         font-size: 1.3em;
         font-weight: bold;
+        color: white;
+        text-shadow: 1px 1px 3px black;
     }
 </style>
 
 <div class="kwik-container">
-    <h1>🛒 Kwik-E-Mart - Carrera de cajas</h1>
+    <h1 style="color: white; text-shadow: 2px 2px 4px black;">🛒 Kwik-E-Mart - Carrera de cajas</h1>
 
-    <p>Tenés <strong id="tiempoTotal">@tiempo</strong> segundos para hacer exactamente <strong id="objetivoClicks">@objetivo</strong> clics.</p>
+    <p style="color: white; text-shadow: 1px 1px 3px black;">Tenés <strong id="tiempoTotal">@tiempo</strong> segundos para hacer exactamente <strong id="objetivoClicks">@objetivo</strong> clics.</p>
 
     <div class="contador">
         ⏱ Tiempo restante: <span id="tiempoRestante">@tiempo</span>s

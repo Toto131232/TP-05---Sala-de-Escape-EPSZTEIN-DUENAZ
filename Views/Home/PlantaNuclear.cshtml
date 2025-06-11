@@ -1,53 +1,171 @@
-@model saladeescape.Models.Patron
-@{
-    ViewData["Title"] = "Planta Nuclear - Simón";
-    var iluminado = ViewBag.BotonIluminado as int?;
-}
-
-<h2>Juego de Simón - Planta Nuclear</h2>
-
-@if (!Model.Secuencia.Any())
-{
-    <form method="post" asp-action="Iniciar">
-        <button type="submit">Iniciar Juego</button>
-    </form>
-}
-else if (!Model.MostrandoPatron)
-{
-    <div class="grid">
-        @for (int i = 0; i < 9; i++)
-        {
-            <form method="post" asp-action="InputUsuario" style="display:inline;">
-                <input type="hidden" name="botonId" value="@i" />
-                <button class="grid-button" type="submit" style="background-color:@(iluminado == i ? "#ff0" : "#ccc")">@i</button>
-            </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simon 3x3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/img/Planta Nuclear.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
         }
-    </div>
-}
-else
-{
-    <p>Mostrando patrón...</p>
-    <div class="grid">
-        @for (int i = 0; i < 9; i++)
-        {
-            <button disabled class="grid-button" style="background-color:@(iluminado == i ? "#ff0" : "#eee")">@i</button>
+
+        .container-wrapper {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
         }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            grid-gap: 15px;
+        }
+
+        .button {
+            width: 80px;
+            height: 80px;
+            background-color: #444;
+            border: 2px solid #00ffcc;
+            border-radius: 12px;
+            box-shadow: 0 4px #222;
+            transition: background-color 0.2s ease, transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .lit {
+            background-color: #00ffcc !important;
+        }
+
+        .pressed {
+            background-color: #88ffcc !important;
+        }
+
+        .top-lights {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            max-width: 300px;
+        }
+
+        .top-light {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            background-color: #111;
+            border-radius: 50%;
+            border: 1px solid #0f0;
+        }
+
+        .top-light.on {
+            background-color: #0f0;
+            box-shadow: 0 0 10px #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <div class="top-lights">
+            <div class="top-light" id="tl0"></div>
+            <div class="top-light" id="tl1"></div>
+            <div class="top-light" id="tl2"></div>
+            <div class="top-light" id="tl3"></div>
+            <div class="top-light" id="tl4"></div>
+            <div class="top-light" id="tl5"></div>
+            <div class="top-light" id="tl6"></div>
+            <div class="top-light" id="tl7"></div>
+            <div class="top-light" id="tl8"></div>
+            <div class="top-light" id="tl9"></div>
+        </div>
+        <div class="container">
+            <div class="button" data-index="0"></div>
+            <div class="button" data-index="1"></div>
+            <div class="button" data-index="2"></div>
+            <div class="button" data-index="3"></div>
+            <div class="button" data-index="4"></div>
+            <div class="button" data-index="5"></div>
+            <div class="button" data-index="6"></div>
+            <div class="button" data-index="7"></div>
+            <div class="button" data-index="8"></div>
+        </div>
     </div>
-}
 
-<style>
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 100px);
-        grid-gap: 10px;
-        margin-top: 20px;
-    }
+    <script>
+        const pattern = [];
+        const buttons = document.querySelectorAll('.button');
+        const topLights = document.querySelectorAll('.top-light');
+        let userStep = 0;
 
-    .grid-button {
-        width: 100px;
-        height: 100px;
-        font-size: 24px;
-        border: none;
-        transition: background-color 0.3s ease;
-    }
-</style>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function playPattern() {
+            for (let i = 0; i < pattern.length; i++) {
+                const index = pattern[i];
+                buttons[index].classList.add('lit');
+                await sleep(500);
+                buttons[index].classList.remove('lit');
+                await sleep(200);
+            }
+        }
+
+        function lightTop(index) {
+            topLights.forEach(l => l.classList.remove('on'));
+            for (let i = 0; i <= index; i++) {
+                topLights[i].classList.add('on');
+            }
+        }
+
+        function nextRound() {
+            userStep = 0;
+            pattern.push(Math.floor(Math.random() * 9));
+            lightTop(pattern.length - 1);
+            playPattern();
+        }
+
+        async function handleLoss() {
+            await sleep(500);
+            window.location.href = "perdiste.html";
+        }
+
+        async function handleWin() {
+            await sleep(500);
+            window.location.href = "ganaste.html";
+        }
+
+        buttons.forEach((btn, index) => {
+            btn.addEventListener('click', async () => {
+                btn.classList.add('pressed');
+                await sleep(200);
+                btn.classList.remove('pressed');
+
+                if (index === pattern[userStep]) {
+                    userStep++;
+                    if (userStep === pattern.length) {
+                        if (pattern.length === 10) {
+                            handleWin();
+                        } else {
+                            setTimeout(nextRound, 500);
+                        }
+                    }
+                } else {
+                    handleLoss();
+                }
+            });
+        });
+
+        nextRound();
+    </script>
+</body>
+</html>
