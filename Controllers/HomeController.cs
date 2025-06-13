@@ -80,6 +80,11 @@ public class HomeController : Controller
     {
         return View("city");
     }
+        public IActionResult Ganaste1()
+    {
+        return View("Ganaste1");
+    }
 }
+
 
 
