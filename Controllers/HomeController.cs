@@ -23,7 +23,7 @@ public class HomeController : Controller
     }
     private static Patron _game = new();
 
-     private static Patron _juego = new();
+    private static Patron _juego = new();
 
     public IActionResult PlantaNuclear()
     {
@@ -68,22 +68,64 @@ public class HomeController : Controller
         return View();
     }
 
-        public IActionResult KwikEMart()
-        {
-            return View("KwikEMart");
-        }
-        public IActionResult Krusty()
-        {
-            return View("krusty");
-        }
-        public IActionResult City()
+    public IActionResult KwikEMart()
+    {
+        return View("KwikEMart");
+    }
+    public IActionResult Krusty()
+    {
+        return View("krusty");
+    }
+    public IActionResult City()
     {
         return View("city");
     }
-        public IActionResult Ganaste1()
+    public IActionResult Ganaste1()
     {
         return View("Ganaste1");
     }
+    public IActionResult Moe()
+    {
+        return View("moe");
+    }
+private static readonly List<string> palabrasClave = new()
+        {
+            "homero", "duff", "barney", "moe", "squishee",
+            "donuts", "flanders", "lisa", "cerveza", "springfield"
+        };
+
+        [HttpGet]
+        public IActionResult Index(int ronda = 0)
+        {
+            if (ronda < 0 || ronda >= palabrasClave.Count)
+                return RedirectToAction("Perdiste");
+
+            ViewBag.Ronda = ronda;
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(string FraseIngresada, int ronda)
+        {
+            if (ronda < 0 || ronda >= palabrasClave.Count)
+                return RedirectToAction("Perdiste");
+
+            var correcta = palabrasClave[ronda].ToLower();
+
+            if (FraseIngresada?.Trim().ToLower() == correcta)
+            {
+                ronda++;
+                if (ronda >= palabrasClave.Count)
+                    return RedirectToAction("Ganaste");
+
+                return RedirectToAction("Index", new { ronda });
+            }
+
+            return RedirectToAction("Perdiste");
+        }
+
+        public IActionResult Ganaste() => View();
+        public IActionResult Perdiste() => View();
 }
 
 

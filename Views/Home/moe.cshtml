@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Taberna de Moe - Frase Oculta";
+    var ronda = Convert.ToInt32(ViewBag.Ronda ?? 0);
+
+    var frases = new List<List<string>>
+    {
+        // Misma lista de frases que antes
+    };
+}
+<h2>Ronda @(ronda + 1) / 10</h2>
+<p>Leé las quejas y descubrí la palabra oculta. ¡Hay letras falsas!</p>
+
+<div style="font-family: monospace; background-color: #f0f0f0; padding: 15px; border: 1px solid #ccc; max-width: 700px;">
+    @foreach (var linea in frases[ronda])
+    {
+        <p>@Html.Raw(linea)</p>
+    }
+</div>
+
+<br />
+<form asp-action="Index" asp-controller="Moe" method="post">
+    <input type="hidden" name="ronda" value="@ronda" />
+    <label for="FraseIngresada">Palabra descubierta:</label>
+    <input type="text" name="FraseIngresada" required />
+    <br /><br />
+    <button type="submit">Enviar</button>
+</form>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1e2fcCnpGf3/fN0L5KGFa84CqSi9nl7VOqNZ/Imr+f0=",
+  "Hash": "rt7ZE3L5zzVHBiVlRUTcnbaQ7jFPjdsLeSXFXjC73fs=",
   "Source": "saladeescape",
   "BasePath": "_content/saladeescape",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "saladeescape\\wwwroot",
       "Source": "saladeescape",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\css\\site.css",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\css\\site.css",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\favicon.ico",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Auto.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Auto.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/Auto.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Auto.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Bareny.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Bareny.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/Bareny.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Bareny.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Bart en skate.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Bart en skate.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/Bart en skate.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Bart en skate.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\bart.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\bart.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/bart.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\img\\bart.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\CasaSimpson.webp",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\CasaSimpson.webp",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/CasaSimpson.webp",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\img\\CasaSimpson.webp"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Dona.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Dona.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/Dona.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Dona.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\duff.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\duff.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/duff.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\img\\duff.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\homer.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\homer.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/homer.png",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homer.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\homer2.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\homer2.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/homer2.png",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homer2.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\krustybg.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\krustybg.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/krustybg.png",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\img\\krustybg.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\kwik.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\kwik.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/kwik.png",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\img\\kwik.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\mapa.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\mapa.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/mapa.png",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\img\\mapa.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\nelson.png",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\nelson.png",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/nelson.png",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\img\\nelson.png"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Perro.webp",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Perro.webp",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/Perro.webp",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Perro.webp"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\personajestodos.jpeg",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\personajestodos.jpeg",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/personajestodos.jpeg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\personajestodos.jpeg"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Planta Nuclear.webp",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Planta Nuclear.webp",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "img/Planta Nuclear.webp",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Planta Nuclear.webp"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\js\\site.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\js\\site.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "saladeescape",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194388\\Desktop\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
+      "ContentRoot": "D:\\Toto Usuario\\Escritorio\\Scape Room\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\",
       "BasePath": "_content/saladeescape",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
