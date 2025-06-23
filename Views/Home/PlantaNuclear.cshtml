@@ -135,13 +135,14 @@
         }
 
         async function handleLoss() {
-            await sleep(500);
-            window.location.href = "perdiste.html";
-        }
+    await sleep(500);
+    window.location.href = "/Home/Perdiste2";
+}
+
 
         async function handleWin() {
             await sleep(500);
-            window.location.href = "ganaste1.html";
+            window.location.href = "/Juego/Ganaste2";
         }
 
         buttons.forEach((btn, index) => {

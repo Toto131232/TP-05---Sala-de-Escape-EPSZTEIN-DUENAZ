@@ -114,3 +114,32 @@ D:\Toto Usuario\Escritorio\Scape Room\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj
 D:\Toto Usuario\Escritorio\Scape Room\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.pdb
 D:\Toto Usuario\Escritorio\Scape Room\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.genruntimeconfig.cache
 D:\Toto Usuario\Escritorio\Scape Room\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\ref\saladeescape.dll
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\appsettings.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.staticwebassets.runtime.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.exe
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.deps.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.runtimeconfig.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.dll
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\bin\Debug\net8.0\saladeescape.pdb
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.AssemblyInfoInputs.cache
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.AssemblyInfo.cs
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.csproj.CoreCompileInputs.cache
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.RazorAssemblyInfo.cache
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.RazorAssemblyInfo.cs
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.sourcelink.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.saladeescape.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.build.saladeescape.props
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.saladeescape.props
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.saladeescape.props
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\scopedcss\bundle\saladeescape.styles.css
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.dll
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\refint\saladeescape.dll
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.pdb
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\saladeescape.genruntimeconfig.cache
+C:\Users\49194388\Desktop\Saladeescape\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\obj\Debug\net8.0\ref\saladeescape.dll

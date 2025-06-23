@@ -94,14 +94,25 @@
         puntajeCajita.innerText = `Puntos: ${puntos}`;
         puntajeCajita.style.color = puntos < 0 ? "red" : "#222";
 
+        // ✅ Si ganaste
         if (puntos >= 75 && juegoActivo) {
             juegoActivo = false;
             clearInterval(aparicionInterval);
             juego.querySelectorAll(".personaje").forEach(p => p.remove());
             mensajeFinal.innerText = "🎉 ¡Ganaste el juego!";
-
             setTimeout(() => {
-                window.location.href = "ganaste.html";
+                window.location.href = "Ganaste4.html";
+            }, 1000);
+        }
+
+        // ❌ Si perdiste
+        if (puntos <= -25 && juegoActivo) {
+            juegoActivo = false;
+            clearInterval(aparicionInterval);
+            juego.querySelectorAll(".personaje").forEach(p => p.remove());
+            mensajeFinal.innerText = "💥 ¡Perdiste el juego!";
+            setTimeout(() => {
+                window.location.href = "Perdiste4.html";
             }, 1000);
         }
     }
