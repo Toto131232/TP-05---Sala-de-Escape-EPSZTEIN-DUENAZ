@@ -15,7 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View("Index");
+        return View();
     }
     public IActionResult CasaSimpson()
     {

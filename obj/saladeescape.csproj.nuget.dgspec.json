@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49194388\\Desktop\\Saladeescape\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj": {}
+    "C:\\Users\\49194388\\Desktop\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49194388\\Desktop\\Saladeescape\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj": {
+    "C:\\Users\\49194388\\Desktop\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49194388\\Desktop\\Saladeescape\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj",
+        "projectUniqueName": "C:\\Users\\49194388\\Desktop\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj",
         "projectName": "saladeescape",
-        "projectPath": "C:\\Users\\49194388\\Desktop\\Saladeescape\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj",
+        "projectPath": "C:\\Users\\49194388\\Desktop\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\saladeescape.csproj",
         "packagesPath": "C:\\Users\\49194388\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49194388\\Desktop\\Saladeescape\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\obj\\",
+        "outputPath": "C:\\Users\\49194388\\Desktop\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
