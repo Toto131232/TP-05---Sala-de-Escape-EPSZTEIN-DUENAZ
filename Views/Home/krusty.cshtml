@@ -2,50 +2,88 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Disparale a los Personajes de los Simpson</title>
+    <title>Juego Simpsons - Disparos</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #222;
-            color: white;
+            font-family: Arial;
             margin: 0;
             padding: 0;
-            text-align: center;
+            overflow: hidden;
+            background: url('/img/krustybg.png') no-repeat center center fixed;
+            background-size: cover;
         }
 
-        h1 {
-            margin-top: 70px;
-        }
-
-        #puntaje-cajita {
-            position: fixed;
+        #pantallaInicio {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            background: #ffcc00;
-            color: #222;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #pantallaInicio h1 {
+            margin: 30px 0 10px 0;
+            font-size: 36px;
+        }
+
+        #pantallaInicio p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        #pantallaInicio button {
+            padding: 12px 24px;
+            font-size: 18px;
+            margin-top: 20px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #puntaje-cajita {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-size: 22px;
             font-weight: bold;
-            font-size: 1.5em;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            background-color: rgba(255, 255, 0, 0.9);
+            padding: 10px 20px;
+            border-radius: 10px;
             z-index: 1000;
-            user-select: none;
+        }
+
+        #temporizador {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+            z-index: 1000;
         }
 
         #juego {
-            position: relative;
-            width: 800px;
-            height: 500px;
-            margin: 30px auto;
-            background-image: url("/img/krustybg.png");
-            background-size: cover;
-            background-position: center;
-            border: 4px solid yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
-            border-radius: 10px;
+            z-index: 1;
         }
 
-        .personaje {
+        .personaje, .obstaculo {
             position: absolute;
             width: 80px;
             height: 80px;
@@ -53,22 +91,46 @@
             transition: transform 0.1s;
         }
 
-        .personaje:hover {
+        .personaje:hover, .obstaculo:hover {
             transform: scale(1.1);
         }
 
+        .obstaculo {
+            background-color: red;
+            color: white;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
         #mensaje-final {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 2em;
             color: lightgreen;
-            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
 
-<div id="puntaje-cajita">Puntos: 0</div>
+<div id="pantallaInicio">
+    <h1>🎯 Bienvenido al juego de disparos</h1>
+    <p>Hacé clic en los personajes de Los Simpson para ganar puntos.</p>
+    <p>¡Cuidado! A veces aparecerá un “-5” que te hace perder puntos si lo tocás o ignorás.</p>
+    <p>Tenés 15 minutos para llegar a <strong>150 puntos</strong>. ¡Buena suerte!</p>
+    <button onclick="empezarJuego()">Empezar juego</button>
+</div>
 
-<h1>🎯 ¡Disparale a los personajes de Los Simpson!</h1>
+<div id="puntaje-cajita">Puntos: 0</div>
+<div id="temporizador">Tiempo: 15:00</div>
 
 <div id="juego"></div>
 <div id="mensaje-final"></div>
@@ -77,9 +139,14 @@
     const juego = document.getElementById("juego");
     const puntajeCajita = document.getElementById("puntaje-cajita");
     const mensajeFinal = document.getElementById("mensaje-final");
+    const pantallaInicio = document.getElementById("pantallaInicio");
+    const temporizador = document.getElementById("temporizador");
 
     let puntos = 0;
-    let juegoActivo = true;
+    let juegoActivo = false;
+    let tiempoRestante = 900;
+    let temporizadorInterval;
+    let aparicionInterval;
 
     const imagenes = [
         "/img/homer.png",
@@ -94,92 +161,114 @@
         puntajeCajita.innerText = `Puntos: ${puntos}`;
         puntajeCajita.style.color = puntos < 0 ? "red" : "#222";
 
-        // ✅ Si ganaste
-        if (puntos >= 75 && juegoActivo) {
-            juegoActivo = false;
-            clearInterval(aparicionInterval);
-            juego.querySelectorAll(".personaje").forEach(p => p.remove());
-            mensajeFinal.innerText = "🎉 ¡Ganaste el juego!";
-            setTimeout(() => {
-                window.location.href = "Ganaste4";
-            }, 1000);
+        if (puntos >= 150 && juegoActivo) {
+            finalizarJuego("🎉 ¡Ganaste el juego!", "Ganaste4");
         }
 
-        // ❌ Si perdiste
         if (puntos <= -25 && juegoActivo) {
-            juegoActivo = false;
-            clearInterval(aparicionInterval);
-            juego.querySelectorAll(".personaje").forEach(p => p.remove());
-            mensajeFinal.innerText = "💥 ¡Perdiste el juego!";
-            setTimeout(() => {
-                window.location.href = "Perdiste4";
-            }, 1000);
+            finalizarJuego("💥 ¡Perdiste el juego!", "Perdiste4");
         }
     }
 
-    function moverPersonaje(personaje) {
+    function finalizarJuego(mensaje, redireccion) {
+        juegoActivo = false;
+        clearInterval(aparicionInterval);
+        clearInterval(temporizadorInterval);
+        juego.querySelectorAll(".personaje, .obstaculo").forEach(p => p.remove());
+        mensajeFinal.innerText = mensaje;
+        setTimeout(() => window.location.href = redireccion, 1000);
+    }
+
+    function actualizarTemporizador() {
+        if (!juegoActivo) return;
+        tiempoRestante--;
+        const minutos = Math.floor(tiempoRestante / 60);
+        const segundos = tiempoRestante % 60;
+        temporizador.innerText = `Tiempo: ${minutos}:${segundos < 10 ? "0" + segundos : segundos}`;
+
+        if (tiempoRestante <= 0) {
+            finalizarJuego("⏰ ¡Se acabó el tiempo!", "Perdiste4");
+        }
+    }
+
+    function moverElemento(elem) {
         const velocidad = 4 + Math.random() * 4;
         let dx = (Math.random() < 0.5 ? -1 : 1) * velocidad;
         let dy = (Math.random() < 0.5 ? -1 : 1) * velocidad;
 
         const mover = setInterval(() => {
-            const x = personaje.offsetLeft + dx;
-            const y = personaje.offsetTop + dy;
+            const x = elem.offsetLeft + dx;
+            const y = elem.offsetTop + dy;
 
             if (x <= 0 || x >= juego.clientWidth - 80) dx = -dx;
             if (y <= 0 || y >= juego.clientHeight - 80) dy = -dy;
 
-            personaje.style.left = `${personaje.offsetLeft + dx}px`;
-            personaje.style.top = `${personaje.offsetTop + dy}px`;
+            elem.style.left = `${elem.offsetLeft + dx}px`;
+            elem.style.top = `${elem.offsetTop + dy}px`;
         }, 50);
         return mover;
     }
 
-    function aparecerPersonaje() {
+    function aparecerElemento() {
         if (!juegoActivo) return;
 
-        const personaje = document.createElement("img");
-        personaje.src = imagenes[Math.floor(Math.random() * imagenes.length)];
-        personaje.classList.add("personaje");
+        const esObstaculo = Math.random() < 0.25;
+        const elemento = document.createElement(esObstaculo ? "div" : "img");
+
+        if (esObstaculo) {
+            elemento.textContent = "-5";
+            elemento.className = "obstaculo";
+        } else {
+            elemento.src = imagenes[Math.floor(Math.random() * imagenes.length)];
+            elemento.classList.add("personaje");
+        }
 
         const maxX = juego.clientWidth - 80;
         const maxY = juego.clientHeight - 80;
         const x = Math.random() * maxX;
         const y = Math.random() * maxY;
 
-        personaje.style.left = `${x}px`;
-        personaje.style.top = `${y}px`;
+        elemento.style.left = `${x}px`;
+        elemento.style.top = `${y}px`;
 
         let fueClickeado = false;
-        const movimiento = moverPersonaje(personaje);
+        const movimiento = moverElemento(elemento);
 
-        personaje.addEventListener("click", () => {
+        elemento.addEventListener("click", () => {
             if (!fueClickeado) {
                 fueClickeado = true;
-                actualizarPuntos(8);
+                actualizarPuntos(esObstaculo ? -5 : 8);
                 clearInterval(movimiento);
-                personaje.remove();
+                elemento.remove();
             }
         });
 
-        juego.appendChild(personaje);
+        juego.appendChild(elemento);
 
-        // ⏱️ Desaparece a los 4 segundos si no fue clickeado
         setTimeout(() => {
-            if (!fueClickeado && juego.contains(personaje)) {
-                actualizarPuntos(-4);
+            if (!fueClickeado && juego.contains(elemento)) {
+                actualizarPuntos(esObstaculo ? -5 : -4);
                 clearInterval(movimiento);
-                personaje.remove();
+                elemento.remove();
             }
         }, 4000);
     }
 
-    const aparicionInterval = setInterval(() => {
-        for (let i = 0; i < 2; i++) {
-            aparecerPersonaje();
-        }
-    }, 800);
+    function empezarJuego() {
+        pantallaInicio.style.display = "none";
+        juegoActivo = true;
+        puntos = 0;
+        tiempoRestante = 900;
+        puntajeCajita.innerText = "Puntos: 0";
+        temporizador.innerText = "Tiempo: 15:00";
+        temporizadorInterval = setInterval(actualizarTemporizador, 1000);
+        aparicionInterval = setInterval(() => {
+            for (let i = 0; i < 2; i++) aparecerElemento();
+        }, 800);
+    }
 </script>
 
 </body>
 </html>
+
+
