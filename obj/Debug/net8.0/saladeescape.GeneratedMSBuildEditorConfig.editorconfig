@@ -9,95 +9,95 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = saladeescape
 build_property.RootNamespace = saladeescape
-build_property.ProjectDir = D:\Toto Usuario\Escritorio\Nueva carpeta\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\
+build_property.ProjectDir = C:\Users\49194388\Desktop\AAA\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Toto Usuario\Escritorio\Nueva carpeta\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ
+build_property.MSBuildProjectDirectory = C:\Users\49194388\Desktop\AAA\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/CasaSimpson.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/CasaSimpson.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXNhU2ltcHNvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/city.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/city.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjaXR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/ganar.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/ganar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxnYW5hci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste1.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste2.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste3.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlMy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste4.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste4.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlNC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste5.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlNS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Index.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/krusty.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/krusty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxrcnVzdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/KwikEMart.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/KwikEMart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLd2lrRU1hcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste1.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZTEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste2.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZTIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste3.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZTMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste4.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste4.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZTQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste5.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZTUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/PlantaNuclear.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/PlantaNuclear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGFudGFOdWNsZWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Shared/_Layout.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/_ViewImports.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Toto Usuario/Escritorio/Nueva carpeta/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/_ViewStart.cshtml]
+[C:/Users/49194388/Desktop/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

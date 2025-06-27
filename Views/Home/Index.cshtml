@@ -178,16 +178,25 @@
         <button id="boton5" disabled>Entrar a Sala 5</button>
       </a>
     </div>
-     <div class="seccion">
-      <p>Clave para Sala 5:</p>
+    <div class="seccion">
+      <p>Clave para Sala 6:</p>
       <div id="entrada6">
-        <input type="text" oninput="verificarClave(this, 'boton5', 'clave6', 'entrada6')" placeholder="Escribe la clave">
+        <input type="text" oninput="verificarClave(this, 'boton6', 'clave7', 'entrada7')" placeholder="Escribe la clave">
       </div>
-      <a href="/Home/ganar" target="_blank">
-        <button id="boton5" disabled>QUE FOR</button>
+      <a href="/Home/MoeBar" target="_blank">
+        <button id="boton6" disabled>Entrar a Sala 6</button>
       </a>
     </div>
 
+    <div class="seccion">
+      <p>Clave para Final:</p>
+      <div id="entrada7">
+        <input type="text" oninput="verificarClave(this, 'botonFinal', 'clave6', 'entrada6')" placeholder="Escribe la clave">
+      </div>
+      <a href="/Home/ganar" target="_blank">
+        <button id="botonFinal" disabled>Finalizar Juego</button>
+      </a>
+    </div>
   </div>
 
   <script>
@@ -196,7 +205,8 @@
       clave3: "comi",
       clave4: "un",
       clave5: "pancho",
-      clave6: "ayer comi un pancho"
+      clave6: "moe",
+      clave7: "ayern comi un pancho"
     };
 
     function verificarClave(inputElem, botonId, claveNombre, contenedorId) {

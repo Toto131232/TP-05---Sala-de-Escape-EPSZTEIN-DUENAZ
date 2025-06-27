@@ -124,7 +124,7 @@
 <div id="pantallaInicio">
     <h1>🎯 Bienvenido al juego de disparos</h1>
     <p>Hacé clic en los personajes de Los Simpson para ganar puntos.</p>
-    <p>¡Cuidado! A veces aparecerá un “-5” que te hace perder puntos si lo tocás o ignorás.</p>
+    <p>¡Cuidado! A veces aparecerá un “-2” que te hace perder puntos si lo tocás o ignorás.</p>
     <p>Tenés 15 minutos para llegar a <strong>150 puntos</strong>. ¡Buena suerte!</p>
     <button onclick="empezarJuego()">Empezar juego</button>
 </div>
@@ -216,7 +216,7 @@
         const elemento = document.createElement(esObstaculo ? "div" : "img");
 
         if (esObstaculo) {
-            elemento.textContent = "-5";
+            elemento.textContent = "-2";
             elemento.className = "obstaculo";
         } else {
             elemento.src = imagenes[Math.floor(Math.random() * imagenes.length)];
@@ -237,7 +237,7 @@
         elemento.addEventListener("click", () => {
             if (!fueClickeado) {
                 fueClickeado = true;
-                actualizarPuntos(esObstaculo ? -5 : 8);
+                actualizarPuntos(esObstaculo ? -2 : 5);
                 clearInterval(movimiento);
                 elemento.remove();
             }
@@ -247,11 +247,11 @@
 
         setTimeout(() => {
             if (!fueClickeado && juego.contains(elemento)) {
-                actualizarPuntos(esObstaculo ? -5 : -4);
+                actualizarPuntos(esObstaculo ? -2 : -2);
                 clearInterval(movimiento);
                 elemento.remove();
             }
-        }, 4000);
+        }, 5000); 
     }
 
     function empezarJuego() {
@@ -270,5 +270,4 @@
 
 </body>
 </html>
-
 
