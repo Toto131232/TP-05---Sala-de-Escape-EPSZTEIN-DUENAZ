@@ -90,6 +90,7 @@
     let clicks = 0;
     let tiempoRestante = tiempo;
     let juegoActivo = false;
+    let juegoTerminado = false;
     let timerInterval;
     let movimientoInterval;
 
@@ -169,16 +170,19 @@
     });
 
     function verificarClicks() {
+        if (juegoTerminado) return;
+
         if (clicks > objetivo) {
             finJuego(false);
-        }
-
-        if (clicks === objetivo) {
+        } else if (clicks === objetivo) {
             finJuego(true);
         }
     }
 
     function finJuego(ganaste) {
+        if (juegoTerminado) return;
+        juegoTerminado = true;
+
         clearInterval(timerInterval);
         clearInterval(movimientoInterval);
         juegoActivo = false;
@@ -195,4 +199,3 @@
         }
     }
 </script>
-

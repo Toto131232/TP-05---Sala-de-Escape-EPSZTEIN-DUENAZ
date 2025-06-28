@@ -1,87 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<title>Bart Escapa del Jefe Gorgory</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #222;
-    color: white;
-    margin: 0; padding: 0;
-    text-align: center;
-    user-select: none;
-  }
-  #puntaje-cajita {
-    position: fixed; top: 0; left: 0;
-    width: 100%;
-    background: #ffcc00; color: #222;
-    font-weight: bold; font-size: 1.5em;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    z-index: 1000;
-  }
-  #juego {
-    position: relative;
-    width: 1200px;
-    height: 700px;
-    margin: 60px auto 30px auto;
-    background: url('TU_IMAGEN_FONDO_AQUI.jpg') no-repeat center center;
-    background-size: cover;
-    border: 4px solid yellow;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  #mensaje-final {
-    font-size: 2em;
-    color: lightgreen;
-    margin-top: 20px;
-  }
-  #bart {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90px;
-    height: 120px;
-    background: url('/img/Bart en skate.png') no-repeat center center;
-    background-size: contain;
-    transition: left 0.1s;
-  }
-  .obstaculo {
-    position: absolute;
-    width: 120px;
-    height: 75px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .auto {
-    background-image: url('/img/Perro.webp');
-    height: 60px;
-  }
-  .tren {
-    background-image: url('/img/Auto.png');
-    height: 75px;
-  }
-  .barril {
-    background-image: url('/img/Bareny.png');
-    height: 60px;
-  }
-  #temporizador {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    font-weight: bold;
-    color: #ffcc00;
-    text-shadow: 2px 2px 8px #000;
-    z-index: 2000;
-    user-select: none;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <title>Bart Escapa del Jefe Gorgory</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: url('/img/Bar de mo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    #pantallaInicio {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      text-align: center;
+    }
+
+    #pantallaInicio h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    #pantallaInicio p {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+
+    #pantallaInicio button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      background-color: #ffcc00;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #puntaje-cajita {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: #ffcc00;
+      color: #222;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      z-index: 1000;
+      display: none;
+      text-align: center;
+    }
+
+    #juego {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: none;
+    }
+
+    #mensaje-final {
+      font-size: 2em;
+      color: lightgreen;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      z-index: 1001;
+    }
+
+    #bart {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 120px;
+      background: url('/img/Bart en skate.png') no-repeat center center;
+      background-size: contain;
+      transition: left 0.1s;
+    }
+
+    .obstaculo {
+      position: absolute;
+      width: 120px;
+      height: 75px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .auto {
+      background-image: url('/img/Perro.webp');
+      height: 60px;
+    }
+
+    .tren {
+      background-image: url('/img/Auto.png');
+      height: 75px;
+    }
+
+    .barril {
+      background-image: url('/img/Bareny.png');
+      height: 60px;
+    }
+
+    #temporizador {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      font-weight: bold;
+      color: #ffcc00;
+      text-shadow: 2px 2px 8px #000;
+      z-index: 2000;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
+
+<div id="pantallaInicio">
+  <h1>Bienvenido al juego de escape de Bart 🛹</h1>
+  <p>Mové a Bart con las flechas ⬅️➡️ para esquivar los obstáculos.</p>
+  <p>Algunos obstáculos ¡cambian de carril mientras caen!</p>
+  <p>Tenés 3 vidas para juntar 750 puntos. ¡Suerte!</p>
+  <button onclick="iniciarJuego()">Empezar juego</button>
+</div>
 
 <div id="puntaje-cajita">Vidas: 3 | Puntaje: 0</div>
 <div id="juego">
@@ -100,85 +161,103 @@
   let vidas = 3;
   let puntaje = 0;
   let juegoActivo = false;
-  const anchoJuego = juego.clientWidth;
-  const altoJuego = juego.clientHeight;
-
-  const carriles = [150, 350, 550, 750, 950];
+  let cuenta = 3;
+  const carriles = [];
+  let anchoPantalla, altoPantalla;
   let posicionCarril = 2;
-  bart.style.left = carriles[posicionCarril] + 'px';
-
   let obstaculos = [];
+
+  window.addEventListener('resize', actualizarTamaño);
+  function actualizarTamaño() {
+    anchoPantalla = window.innerWidth;
+    altoPantalla = window.innerHeight;
+    const espacio = anchoPantalla / 6;
+    carriles.length = 0;
+    for (let i = 1; i <= 5; i++) carriles.push(espacio * i);
+    if (carriles[posicionCarril]) bart.style.left = carriles[posicionCarril] + 'px';
+  }
+
+  actualizarTamaño();
 
   window.addEventListener('keydown', (e) => {
     if(!juegoActivo) return;
-
-    if(e.key === 'ArrowLeft') {
-      if(posicionCarril > 0) {
-        posicionCarril--;
-        bart.style.left = carriles[posicionCarril] + 'px';
-      }
+    if(e.key === 'ArrowLeft' && posicionCarril > 0) {
+      posicionCarril--;
+      bart.style.left = carriles[posicionCarril] + 'px';
     }
-    if(e.key === 'ArrowRight') {
-      if(posicionCarril < carriles.length -1) {
-        posicionCarril++;
-        bart.style.left = carriles[posicionCarril] + 'px';
-      }
+    if(e.key === 'ArrowRight' && posicionCarril < carriles.length -1) {
+      posicionCarril++;
+      bart.style.left = carriles[posicionCarril] + 'px';
     }
   });
 
   function crearObstaculo() {
-    if(!juegoActivo) return;
-
+    if (!juegoActivo) return;
     const tipos = ['auto', 'tren', 'barril'];
     const tipo = tipos[Math.floor(Math.random() * tipos.length)];
     const obst = document.createElement('div');
     obst.classList.add('obstaculo', tipo);
 
-    const carrilObst = carriles[Math.floor(Math.random() * carriles.length)];
+    const carrilIndex = Math.floor(Math.random() * carriles.length);
+    const carrilObst = carriles[carrilIndex];
     obst.style.left = carrilObst + 'px';
     obst.style.top = '-80px';
 
+    const moverLateral = Math.random() < 0.3;
+    const direccionLateral = Math.random() < 0.5 ? -1 : 1;
+
     juego.appendChild(obst);
-    obstaculos.push({element: obst, y: -80, carril: carrilObst, tipo});
+    obstaculos.push({
+      element: obst,
+      y: -80,
+      carril: carrilObst,
+      tipo: tipo,
+      moverLateral: moverLateral,
+      direccion: direccionLateral,
+      cambiado: false,
+      carrilIndex: carrilIndex
+    });
   }
 
   function moverObstaculos() {
-    if(!juegoActivo) return;
+    if (!juegoActivo) return;
+    const velocidad = 5 + Math.floor(puntaje / 50);
 
-    const velocidadBase = 10 + Math.floor(puntaje / 100);
-
-    for(let i = obstaculos.length -1; i >= 0; i--) {
+    for (let i = obstaculos.length - 1; i >= 0; i--) {
       let obst = obstaculos[i];
-      obst.y += velocidadBase;
+      obst.y += velocidad;
       obst.element.style.top = obst.y + 'px';
 
-      if(obst.carril === carriles[posicionCarril]) {
-        const bartTop = altoJuego - 130; 
-        if(obst.y + obst.element.clientHeight >= bartTop && obst.y <= bartTop + bart.clientHeight) {
-          obst.element.remove();
-          obstaculos.splice(i,1);
-          vidas--;
-          puntaje -= 50;
-          if(puntaje < 0) puntaje = 0;
-          actualizarPantalla();
-          if(vidas <= 0) {
-            finJuego(false);
-            return;
-          }
-          continue;
+      if (obst.moverLateral && !obst.cambiado && obst.y > altoPantalla / 2) {
+        const nuevoIndex = obst.carrilIndex + obst.direccion;
+        if (nuevoIndex >= 0 && nuevoIndex < carriles.length) {
+          obst.carrilIndex = nuevoIndex;
+          obst.carril = carriles[nuevoIndex];
+          obst.element.style.left = obst.carril + 'px';
+          obst.cambiado = true;
         }
       }
 
-      if(obst.y > altoJuego) {
+      const bartTop = altoPantalla - 130;
+      if (obst.carril === carriles[posicionCarril] &&
+          obst.y + obst.element.clientHeight >= bartTop &&
+          obst.y <= bartTop + bart.clientHeight) {
         obst.element.remove();
-        obstaculos.splice(i,1);
+        obstaculos.splice(i, 1);
+        vidas--;
+        puntaje -= 50;
+        if (puntaje < 0) puntaje = 0;
+        actualizarPantalla();
+        if (vidas <= 0) return finJuego(false);
+        continue;
+      }
+
+      if (obst.y > altoPantalla) {
+        obst.element.remove();
+        obstaculos.splice(i, 1);
         puntaje += 10;
         actualizarPantalla();
-
-        if(puntaje >= 250) {
-          finJuego(true);
-          return;
-        }
+        if (puntaje >= 750) return finJuego(true);
       }
     }
   }
@@ -191,37 +270,36 @@
     juegoActivo = false;
     obstaculos.forEach(o => o.element.remove());
     obstaculos = [];
-
-    if(gano) {
-      mensajeFinal.innerText = "🎉 ¡Ganaste! ¡Bart escapó del Jefe Gorgory!";
-      setTimeout(() => {
-        window.location.href = "Ganaste5";
-      }, 1200);
-    } else {
-      mensajeFinal.innerText = "💀 ¡Perdiste! Game Over.";
-      setTimeout(() => {
-        window.location.href = "Perdiste5";
-      }, 1200);
-    }
+    mensajeFinal.innerText = gano 
+      ? "🎉 ¡Ganaste! ¡Bart escapó del Jefe Gorgory!" 
+      : "💀 ¡Perdiste! Game Over.";
+    setTimeout(() => {
+      window.location.href = gano ? "Ganaste5" : "Perdiste5";
+    }, 1500);
   }
 
-  let cuenta = 3;
-  temporizador.innerText = cuenta;
-  const intervaloTemporizador = setInterval(() => {
-    cuenta--;
-    if(cuenta === 0) {
-      temporizador.style.display = 'none';
-      juegoActivo = true;
-      clearInterval(intervaloTemporizador);
-      iniciarJuego();
-    } else {
-      temporizador.innerText = cuenta;
-    }
-  }, 1000);
-
   function iniciarJuego() {
-    setInterval(crearObstaculo, 900);
-    setInterval(moverObstaculos, 40);
+    document.getElementById('pantallaInicio').style.display = 'none';
+    juego.style.display = 'block';
+    puntajeCajita.style.display = 'block';
+    mensajeFinal.innerText = '';
+    cuenta = 3;
+    temporizador.innerText = cuenta;
+    temporizador.style.display = 'block';
+    actualizarTamaño();
+
+    const intervaloTemporizador = setInterval(() => {
+      cuenta--;
+      if(cuenta === 0) {
+        temporizador.style.display = 'none';
+        juegoActivo = true;
+        clearInterval(intervaloTemporizador);
+        setInterval(crearObstaculo, 800);
+        setInterval(moverObstaculos, 40);
+      } else {
+        temporizador.innerText = cuenta;
+      }
+    }, 1000);
   }
 </script>
 

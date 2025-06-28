@@ -1,18 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Simon 3x3</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: url('/img/Oficina Homero.png') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial;
             margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url('/img/Planta Nuclear.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #pantallaInicio {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            text-align: center;
+        }
+
+        #pantallaInicio h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        #pantallaInicio p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        #pantallaInicio button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
         .container-wrapper {
@@ -20,6 +52,12 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+            display: none; /* Oculto al inicio */
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
         }
 
         .container {
@@ -36,6 +74,7 @@
             border-radius: 12px;
             box-shadow: 0 4px #222;
             transition: background-color 0.2s ease, transform 0.2s;
+            cursor: pointer;
         }
 
         .button:hover {
@@ -74,99 +113,111 @@
     </style>
 </head>
 <body>
-    <div class="container-wrapper">
-        <div class="top-lights">
-            <div class="top-light" id="tl0"></div>
-            <div class="top-light" id="tl1"></div>
-            <div class="top-light" id="tl2"></div>
-            <div class="top-light" id="tl3"></div>
-            <div class="top-light" id="tl4"></div>
-            <div class="top-light" id="tl5"></div>
-            <div class="top-light" id="tl6"></div>
-            <div class="top-light" id="tl7"></div>
-            <div class="top-light" id="tl8"></div>
-            <div class="top-light" id="tl9"></div>
-        </div>
-        <div class="container">
-            <div class="button" data-index="0"></div>
-            <div class="button" data-index="1"></div>
-            <div class="button" data-index="2"></div>
-            <div class="button" data-index="3"></div>
-            <div class="button" data-index="4"></div>
-            <div class="button" data-index="5"></div>
-            <div class="button" data-index="6"></div>
-            <div class="button" data-index="7"></div>
-            <div class="button" data-index="8"></div>
-        </div>
+
+<div id="pantallaInicio">
+    <h1>Bienvenido al juego de botones de Homero 🧠</h1>
+    <p>Recordá el patrón de botones iluminados y hacé clic en el mismo orden.</p>
+    <p>Si te equivocás, perdés. Si aciertas 10 patrones, ganás.</p>
+    <button onclick="empezarJuego()">Empezar juego</button>
+</div>
+
+<div class="container-wrapper" id="juego">
+    <div class="top-lights">
+        <div class="top-light" id="tl0"></div>
+        <div class="top-light" id="tl1"></div>
+        <div class="top-light" id="tl2"></div>
+        <div class="top-light" id="tl3"></div>
+        <div class="top-light" id="tl4"></div>
+        <div class="top-light" id="tl5"></div>
+        <div class="top-light" id="tl6"></div>
+        <div class="top-light" id="tl7"></div>
+        <div class="top-light" id="tl8"></div>
+        <div class="top-light" id="tl9"></div>
     </div>
+    <div class="container">
+        <div class="button" data-index="0"></div>
+        <div class="button" data-index="1"></div>
+        <div class="button" data-index="2"></div>
+        <div class="button" data-index="3"></div>
+        <div class="button" data-index="4"></div>
+        <div class="button" data-index="5"></div>
+        <div class="button" data-index="6"></div>
+        <div class="button" data-index="7"></div>
+        <div class="button" data-index="8"></div>
+    </div>
+</div>
 
-    <script>
-        const pattern = [];
-        const buttons = document.querySelectorAll('.button');
-        const topLights = document.querySelectorAll('.top-light');
-        let userStep = 0;
+<script>
+    const pattern = [];
+    const buttons = document.querySelectorAll('.button');
+    const topLights = document.querySelectorAll('.top-light');
+    let userStep = 0;
 
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
-        async function playPattern() {
-            for (let i = 0; i < pattern.length; i++) {
-                const index = pattern[i];
-                buttons[index].classList.add('lit');
-                await sleep(500);
-                buttons[index].classList.remove('lit');
-                await sleep(200);
-            }
-        }
-
-        function lightTop(index) {
-            topLights.forEach(l => l.classList.remove('on'));
-            for (let i = 0; i <= index; i++) {
-                topLights[i].classList.add('on');
-            }
-        }
-
-        function nextRound() {
-            userStep = 0;
-            pattern.push(Math.floor(Math.random() * 9));
-            lightTop(pattern.length - 1);
-            playPattern();
-        }
-
-        async function handleLoss() {
-    await sleep(500);
-    window.location.href = "/Home/Perdiste2";
-}
-
-
-        async function handleWin() {
+    async function playPattern() {
+        for (let i = 0; i < pattern.length; i++) {
+            const index = pattern[i];
+            buttons[index].classList.add('lit');
             await sleep(500);
-            window.location.href = "/Home/Ganaste2";
+            buttons[index].classList.remove('lit');
+            await sleep(200);
         }
+    }
 
-        buttons.forEach((btn, index) => {
-            btn.addEventListener('click', async () => {
-                btn.classList.add('pressed');
-                await sleep(200);
-                btn.classList.remove('pressed');
+    function lightTop(index) {
+        topLights.forEach(l => l.classList.remove('on'));
+        for (let i = 0; i <= index; i++) {
+            topLights[i].classList.add('on');
+        }
+    }
 
-                if (index === pattern[userStep]) {
-                    userStep++;
-                    if (userStep === pattern.length) {
-                        if (pattern.length === 10) {
-                            handleWin();
-                        } else {
-                            setTimeout(nextRound, 500);
-                        }
+    function nextRound() {
+        userStep = 0;
+        pattern.push(Math.floor(Math.random() * 9));
+        lightTop(pattern.length - 1);
+        playPattern();
+    }
+
+    async function handleLoss() {
+        await sleep(500);
+        window.location.href = "/Home/Perdiste2";
+    }
+
+    async function handleWin() {
+        await sleep(500);
+        window.location.href = "/Home/Ganaste2";
+    }
+
+    buttons.forEach((btn, index) => {
+        btn.addEventListener('click', async () => {
+            btn.classList.add('pressed');
+            await sleep(200);
+            btn.classList.remove('pressed');
+
+            if (index === pattern[userStep]) {
+                userStep++;
+                if (userStep === pattern.length) {
+                    if (pattern.length === 10) {
+                        handleWin();
+                    } else {
+                        setTimeout(nextRound, 500);
                     }
-                } else {
-                    handleLoss();
                 }
-            });
+            } else {
+                handleLoss();
+            }
         });
+    });
 
+    function empezarJuego() {
+        document.getElementById("pantallaInicio").style.display = "none";
+        document.getElementById("juego").style.display = "block";
         nextRound();
-    </script>
+    }
+</script>
+
 </body>
 </html>

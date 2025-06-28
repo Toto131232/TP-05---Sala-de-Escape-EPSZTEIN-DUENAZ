@@ -121,9 +121,13 @@ public class HomeController : Controller
     return View("Perdiste4");
 }
     public IActionResult Perdiste5()
-{
-    return View("Perdiste5");
-}
+    {
+        return View("Perdiste5");
+    }
+    public IActionResult Menu()
+    {
+        return View("Menu");
+    }
 
 
 }
