@@ -104,6 +104,14 @@ public class HomeController : Controller
     {
         return View("PlantaNuclear");
     }
+    public IActionResult SalaFinal()
+    {
+        return View("SalaFinal");
+    }
+    public IActionResult ganar()
+    {
+        return View("ganar");
+    }
   public class LisaController : Controller
     {
         private readonly string _fraseCorrecta = "LIBERTAD Y CONOCIMIENTO";
