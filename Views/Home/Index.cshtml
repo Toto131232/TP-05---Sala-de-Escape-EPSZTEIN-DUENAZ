@@ -71,6 +71,15 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      width: 80%;
+      max-width: 300px;
+    }
   </style>
 </head>
 <body>
@@ -78,7 +87,7 @@
 
   <div id="pantalla-inicio" class="contenido">
     <h1>Escape Room Springfield</h1>
-    <p>¡Bienvenido al juego!, Lee todas las reglas con mucha atencion y acuerdate bien las contraseñas</p>
+    <p>¡Bienvenido al juego!, Lee todas las reglas con mucha atención y acuérdate bien las contraseñas</p>
     <button class="btn-start" onclick="mostrarTexto()">Comenzar</button>
   </div>
 
@@ -91,13 +100,32 @@
       <p><strong>Bart:</strong> Tengo que buscar a mi familia.</p>
       <img src="/img/Bart intro3.png" alt="Mapa de Springfield">
     </div>
-    <button class="btn-continue" onclick="window.location.href='/Home/Menu'">Continuar</button>
+
+    <p><strong>Ingresá tu nombre para continuar:</strong></p>
+    <input type="text" id="nombreJugador" placeholder="Tu nombre">
+    <br><br>
+    <button class="btn-continue" id="btnContinuar" onclick="continuarJuego()" disabled>Continuar</button>
   </div>
 
   <script>
     function mostrarTexto() {
       document.getElementById('pantalla-inicio').style.display = 'none';
       document.getElementById('pantalla-texto').style.display = 'block';
+    }
+
+    const inputNombre = document.getElementById('nombreJugador');
+    const btnContinuar = document.getElementById('btnContinuar');
+
+    inputNombre.addEventListener('input', () => {
+      btnContinuar.disabled = inputNombre.value.trim() === "";
+    });
+
+    function continuarJuego() {
+      const nombre = inputNombre.value.trim();
+      if (nombre !== "") {
+        sessionStorage.setItem("nombreJugador", nombre);
+        window.location.href = '/Home/Menu';
+      }
     }
   </script>
 </body>
