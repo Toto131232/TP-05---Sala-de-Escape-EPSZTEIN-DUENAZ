@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("saladeescape")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e47c10348d0dc558718210d05979e28ad6530bc1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff1cd8159817594e4804053d0670c886b124627d")]
 [assembly: System.Reflection.AssemblyProductAttribute("saladeescape")]
 [assembly: System.Reflection.AssemblyTitleAttribute("saladeescape")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

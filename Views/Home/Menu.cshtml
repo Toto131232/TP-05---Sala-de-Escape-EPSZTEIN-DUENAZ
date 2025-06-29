@@ -3,184 +3,183 @@
 }
 <style>
     body {
-  margin: 0;
-  font-family: 'Fredoka', sans-serif;
-  background: url('/img/personajestodos.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-}
+        margin: 0;
+        font-family: 'Fredoka', sans-serif;
+        background: url('/img/personajestodos.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+    }
 
-.overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-}
+    .overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 0;
+    }
 
-.menu {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 60px auto;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-  color: #333;
-}
+    .menu {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 60px auto;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        color: #333;
+    }
 
-h1 {
-  font-size: 3em;
-  color: #f28b00;
-  margin-bottom: 20px;
-}
+    h1 {
+        font-size: 3em;
+        color: #f28b00;
+        margin-bottom: 20px;
+    }
 
-.imagen-inferior img {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
+    .imagen-inferior img {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
 
-.seccion {
-  margin: 20px auto;
-  background-color: #007BFF;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    .seccion {
+        margin: 20px auto;
+        background-color: #007BFF;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-.seccion p {
-  color: white;
-}
+    .seccion p {
+        color: white;
+    }
 
-input {
-  padding: 8px;
-  margin-bottom: 10px;
-  width: 80%;
-}
+    input {
+        padding: 8px;
+        margin-bottom: 10px;
+        width: 80%;
+    }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-.seccion button {
-  background-color: white;
-  color: #007BFF;
-}
+    .seccion button {
+        background-color: white;
+        color: #007BFF;
+    }
 
-.seccion button:hover:enabled {
-  background-color: #0056b3;
-  color: white;
-}
+    .seccion button:hover:enabled {
+        background-color: #0056b3;
+        color: white;
+    }
 
-.seccion button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-  color: #666;
-}
+    .seccion button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        color: #666;
+    }
 </style>
-
 
 <div class="overlay"></div>
 <div id="pantalla-menu" class="menu">
-  <h1>Escape Room Springfield</h1>
+    <h1>Escape Room Springfield</h1>
 
-  <div class="imagen-inferior">
-    <img src="~/img/mapa.png" alt="Mapa Springfield">
-  </div>
-
-  <div class="seccion">
-    <p>Casa Simpsons</p>
-    <a href="/Home/CasaSimpson" target="_blank">
-      <button>Entrar a Sala 1</button>
-    </a>
-  </div>
-
-  <div class="seccion">
-    <p>Planta Nuclear</p>
-    <div id="entrada2">
-      <input type="text" oninput="verificarClave(this, 'boton2', 'clave2', 'entrada2')" placeholder="Escribe la clave">
+    <div class="imagen-inferior">
+        <img src="~/img/mapa.png" alt="Mapa Springfield">
     </div>
-    <a href="/Home/PlantaNuclear" target="_blank">
-      <button id="boton2" disabled>Entrar a Sala 2</button>
-    </a>
-  </div>
 
-  <div class="seccion">
-    <p>Kwik-E-Mart</p>
-    <div id="entrada3">
-      <input type="text" oninput="verificarClave(this, 'boton3', 'clave3', 'entrada3')" placeholder="Escribe la clave">
+    <div class="seccion">
+        <p>Casa Simpsons</p>
+        <a href="/Home/CasaSimpson" target="_blank">
+            <button>Entrar a Sala 1</button>
+        </a>
     </div>
-    <a href="/Home/KwikEMart" target="_blank">
-      <button id="boton3" disabled>Entrar a Sala 3</button>
-    </a>
-  </div>
 
-  <div class="seccion">
-    <p>Krusty</p>
-    <div id="entrada4">
-      <input type="text" oninput="verificarClave(this, 'boton4', 'clave4', 'entrada4')" placeholder="Escribe la clave">
+    <div class="seccion">
+        <p>Planta Nuclear</p>
+        <div id="entrada2">
+            <input type="text" oninput="verificarClave(this, 'boton2', 'clave2', 'entrada2')" placeholder="Escribe la clave">
+        </div>
+        <a href="/Home/PlantaNuclear" target="_blank">
+            <button id="boton2" disabled>Entrar a Sala 2</button>
+        </a>
     </div>
-    <a href="/Home/krusty" target="_blank">
-      <button id="boton4" disabled>Entrar a Sala 4</button>
-    </a>
-  </div>
 
-  <div class="seccion">
-    <p>Bar de Moe</p>
-    <div id="entrada5">
-      <input type="text" oninput="verificarClave(this, 'boton5', 'clave5', 'entrada5')" placeholder="Escribe la clave">
+    <div class="seccion">
+        <p>Kwik-E-Mart</p>
+        <div id="entrada3">
+            <input type="text" oninput="verificarClave(this, 'boton3', 'clave3', 'entrada3')" placeholder="Escribe la clave">
+        </div>
+        <a href="/Home/KwikEMart" target="_blank">
+            <button id="boton3" disabled>Entrar a Sala 3</button>
+        </a>
     </div>
-    <a href="/Home/city" target="_blank">
-      <button id="boton5" disabled>Entrar a Sala 5</button>
-    </a>
-  </div>
 
-  <div class="seccion">
-    <p>Clave para Sala 6:</p>
-    <div id="entrada6">
-      <input type="text" oninput="verificarClave(this, 'boton6', 'clave7', 'entrada7')" placeholder="Escribe la clave">
+    <div class="seccion">
+        <p>Krusty</p>
+        <div id="entrada4">
+            <input type="text" oninput="verificarClave(this, 'boton4', 'clave4', 'entrada4')" placeholder="Escribe la clave">
+        </div>
+        <a href="/Home/Krusty" target="_blank">
+            <button id="boton4" disabled>Entrar a Sala 4</button>
+        </a>
     </div>
-    <a href="/Home/MoeBar" target="_blank">
-      <button id="boton6" disabled>Entrar a Sala 6</button>
-    </a>
-  </div>
 
-  <div class="seccion">
-    <p>Clave para Final:</p>
-    <div id="entrada7">
-      <input type="text" oninput="verificarClave(this, 'botonFinal', 'clave6', 'entrada6')" placeholder="Escribe la clave">
+    <div class="seccion">
+        <p>Bar de Moe</p>
+        <div id="entrada5">
+            <input type="text" oninput="verificarClave(this, 'boton5', 'clave5', 'entrada5')" placeholder="Escribe la clave">
+        </div>
+        <a href="/Home/City" target="_blank">
+            <button id="boton5" disabled>Entrar a Sala 5</button>
+        </a>
     </div>
-    <a href="/Home/ganar" target="_blank">
-      <button id="botonFinal" disabled>Finalizar Juego</button>
-    </a>
-  </div>
+
+    <div class="seccion">
+        <p>Escuela primaria de Springfield</p>
+        <div id="entrada6">
+            <input type="text" oninput="verificarClave(this, 'boton6', 'clave6', 'entrada6')" placeholder="Escribe la clave">
+        </div>
+        <a href="/Home/Escuela" target="_blank">
+            <button id="boton6" disabled>Entrar a Sala 6</button>
+        </a>
+    </div>
+
+    <div class="seccion">
+        <p>Clave para Final:</p>
+        <div id="entrada7">
+            <input type="text" oninput="verificarClave(this, 'botonFinal', 'clave7', 'entrada7')" placeholder="Escribe la clave">
+        </div>
+        <a href="/Home/SalaFinal" target="_blank">
+            <button id="botonFinal" disabled>Finalizar Juego</button>
+        </a>
+    </div>
 </div>
 
 <script>
-  const claves = {
-    clave2: "ayer",
-    clave3: "comi",
-    clave4: "un",
-    clave5: "pancho",
-    clave6: "moe",
-    clave7: "ayern comi un pancho"
-  };
+    const claves = {
+        clave2: "el",
+        clave3: "barto",
+        clave4: "lo",
+        clave5: "hizo",
+        clave6: "de",
+        clave7: "nuevo"
+    };
 
-  function verificarClave(inputElem, botonId, claveNombre, contenedorId) {
-    const valor = inputElem.value.trim().toLowerCase();
-    if (valor === claves[claveNombre]) {
-      document.getElementById(botonId).disabled = false;
-      document.getElementById(contenedorId).innerHTML = "<p style='color:green;'>✔ Clave correcta</p>";
+    function verificarClave(inputElem, botonId, claveNombre, contenedorId) {
+        const valor = inputElem.value.trim().toLowerCase();
+        if (valor === claves[claveNombre]) {
+            document.getElementById(botonId).disabled = false;
+            document.getElementById(contenedorId).innerHTML = "<p style='color:green;'>✔ Clave correcta</p>";
+        }
     }
-  }
 </script>

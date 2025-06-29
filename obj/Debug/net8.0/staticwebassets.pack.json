@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Abuelo.png",
+      "PackagePath": "staticwebassets\\img\\Abuelo.png"
+    },
+    {
       "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Auto.png",
       "PackagePath": "staticwebassets\\img\\Auto.png"
     },
@@ -25,12 +29,40 @@
       "PackagePath": "staticwebassets\\img\\Bart en skate.png"
     },
     {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Bart intro1.png",
+      "PackagePath": "staticwebassets\\img\\Bart intro1.png"
+    },
+    {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Bart intro2.png",
+      "PackagePath": "staticwebassets\\img\\Bart intro2.png"
+    },
+    {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Bart intro3.png",
+      "PackagePath": "staticwebassets\\img\\Bart intro3.png"
+    },
+    {
       "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\CasaSimpson.webp",
       "PackagePath": "staticwebassets\\img\\CasaSimpson.webp"
     },
     {
       "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Dona.png",
       "PackagePath": "staticwebassets\\img\\Dona.png"
+    },
+    {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\HomeroGanaste.webp",
+      "PackagePath": "staticwebassets\\img\\HomeroGanaste.webp"
+    },
+    {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Lisa.png",
+      "PackagePath": "staticwebassets\\img\\Lisa.png"
+    },
+    {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Maggie.png",
+      "PackagePath": "staticwebassets\\img\\Maggie.png"
+    },
+    {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Marge.png",
+      "PackagePath": "staticwebassets\\img\\Marge.png"
     },
     {
       "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Oficina Homero.png",
@@ -43,6 +75,10 @@
     {
       "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\Planta Nuclear.webp",
       "PackagePath": "staticwebassets\\img\\Planta Nuclear.webp"
+    },
+    {
+      "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\ayudante de santa.webp",
+      "PackagePath": "staticwebassets\\img\\ayudante de santa.webp"
     },
     {
       "Id": "D:\\Toto Usuario\\Escritorio\\AAA\\TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ\\wwwroot\\img\\bart.png",

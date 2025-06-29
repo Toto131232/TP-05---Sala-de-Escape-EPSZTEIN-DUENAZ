@@ -15,6 +15,7 @@
       background-size: cover;
       color: white;
     }
+
     .overlay {
       position: fixed;
       top: 0; left: 0;
@@ -22,6 +23,7 @@
       background-color: rgba(0, 0, 0, 0.4);
       z-index: 0;
     }
+
     .contenido {
       position: relative;
       z-index: 1;
@@ -34,11 +36,13 @@
       box-shadow: 0 8px 30px rgba(0,0,0,0.3);
       color: #333;
     }
+
     h1 {
       font-size: 3em;
       color: #f28b00;
       margin-bottom: 20px;
     }
+
     .btn-start, .btn-continue {
       background-color: #ff5722;
       color: white;
@@ -49,9 +53,23 @@
       cursor: pointer;
       transition: background-color 0.3s, transform 0.2s;
     }
+
     .btn-start:hover, .btn-continue:hover {
       background-color: #e64a19;
       transform: scale(1.05);
+    }
+
+    .texto-historia {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+
+    .texto-historia img {
+      max-width: 300px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -65,7 +83,14 @@
   </div>
 
   <div id="pantalla-texto" class="contenido" style="display:none;">
-    <p style="font-size: 1.4em;">Eres Bart Simpson, tienes que encontrar a la familia Simpson que está en alguna parte de Springfield</p>
+    <div class="texto-historia">
+      <p>Bart toca la puerta de su casa pero no le responde nadie</p>
+      <img src="/img/Bart intro1.png" alt="Bart frente a la casa">
+      <p><strong>Bart:</strong> Necesito encontrar a mi familia, ya se hizo tarde.</p>
+      <img src="/img/Bart intro2.png" alt="Bart preocupado">
+      <p><strong>Bart:</strong> Tengo que buscar a mi familia.</p>
+      <img src="/img/Bart intro3.png" alt="Mapa de Springfield">
+    </div>
     <button class="btn-continue" onclick="window.location.href='/Home/Menu'">Continuar</button>
   </div>
 
@@ -77,3 +102,4 @@
   </script>
 </body>
 </html>
+

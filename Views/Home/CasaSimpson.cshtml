@@ -63,7 +63,7 @@
 </div>
 
 <script>
-    let tiempoRestante = 600; // 10 minutos
+    let tiempoRestante = 600;
     let puntos = 0;
     let intervaloCrono;
     let intervaloRosquillas;
@@ -80,7 +80,7 @@
                 tiempoRestante--;
                 actualizarCronometro();
             } else {
-                finalizarJuego(false); // perdió
+                finalizarJuego(false);
             }
         }, 1000);
     }
@@ -96,7 +96,7 @@
         document.getElementById("puntos").textContent = puntos;
 
         if (puntos >= 50) {
-            finalizarJuego(true); // ganó
+            finalizarJuego(true);
         }
     }
 

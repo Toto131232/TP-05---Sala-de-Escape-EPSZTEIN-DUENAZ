@@ -26,6 +26,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjaXR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Escuela.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFc2N1ZWxhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/ganar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxnYW5hci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlNS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Ganaste6.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlNi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Index.cshtml]
@@ -86,8 +94,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZTUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/Perdiste6.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZTYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/PlantaNuclear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGFudGFOdWNsZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Home/SalaFinal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYWxhRmluYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Toto Usuario/Escritorio/AAA/TP-05---Sala-de-Escape-EPSZTEIN-DUENAZ/Views/Shared/_Layout.cshtml]
